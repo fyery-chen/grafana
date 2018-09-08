@@ -165,6 +165,11 @@ spec:
                 secretKeyRef:
                   name: {{ template "grafana.fullname" . }}
                   key: admin-user
+            - name: CCE_SECRET_TEST 
+              valueFrom:
+                secretKeyRef:
+                  name: cce-secret-test 
+                  key: a 
             - name: GF_SECURITY_ADMIN_PASSWORD
               valueFrom:
                 secretKeyRef:
